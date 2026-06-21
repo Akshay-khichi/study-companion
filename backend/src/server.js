@@ -51,3 +51,10 @@ process.on('unhandledRejection', (err, promise) => {
   console.error(`Unhandled Rejection: ${err.message}`);
   server.close(() => process.exit(1));
 });
+
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    uptime: process.uptime()
+  });
+});
