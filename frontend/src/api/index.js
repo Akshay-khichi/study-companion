@@ -9,7 +9,7 @@ if (!userId) {
 }
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: 'https://study-companion-u519.onrender.com/api',
 });
 
 // Send user id with every request
